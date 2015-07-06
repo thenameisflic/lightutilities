@@ -1,0 +1,18 @@
+article, aside, details,
+figcaption, figure,
+footer, header, hgroup,
+menu, nav, div,
+form, a, span, pre,
+h1, h2, h3, h4, h5, h6,
+ul, ol, li, table, td, tr,
+section, summary,
+button, input,
+optgroup, select,
+textarea { box-sizing: border-box; }
+
+body { position: absolute; width: 100%; margin: 0; }
+
+.with-bounds { max-width: 1000px; margin: auto; }
+@media all and (max-width: 1000px) {
+	.with-bounds { padding: 20px; }
+}

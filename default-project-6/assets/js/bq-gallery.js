@@ -61,67 +61,69 @@ function refreshBQButtons(){
 function showBQGallery(idx){ bqCurrent = idx; loadBQImage(idx); $('.bq-gallery').css({'display': 'block'}); }
 
 function loadBQImage(idx){
-	$('.bq-gallery .display-inner').css({'overflow': 'hidden'});
-	var container = $('.bq-gallery .display-inner');
-	var k = 22;
-	container.css({
-		'height': window.innerHeight - k * 2 - $('.bq-gallery .btn-1').height(), 
-		'line-height': window.innerHeight - k * 2 - $('.bq-gallery .btn-1').height() + 'px'
-	});
-	var loading = new Image();
-	loading.src = 'assets/imgs/bq-gallery/loading.gif';
-	$(loading).addClass('image').addClass('loading');
-	loading.onload = function(){
+	if (bqGallery) {
+		$('.bq-gallery .display-inner').css({'overflow': 'hidden'});
+		var container = $('.bq-gallery .display-inner');
+		var k = 22;
 		container.css({
 			'height': window.innerHeight - k * 2 - $('.bq-gallery .btn-1').height(), 
 			'line-height': window.innerHeight - k * 2 - $('.bq-gallery .btn-1').height() + 'px'
 		});
-		$('.display-inner').html(loading);		
-		var image = new Image();
-		image.src = bqGallery[idx].src;
-		$(image).addClass('image').attr('data-showingFull', false);
-		image.onload = function(){
+		var loading = new Image();
+		loading.src = 'assets/imgs/bq-gallery/loading.gif';
+		$(loading).addClass('image').addClass('loading');
+		loading.onload = function(){
 			container.css({
 				'height': window.innerHeight - k * 2 - $('.bq-gallery .btn-1').height(), 
 				'line-height': window.innerHeight - k * 2 - $('.bq-gallery .btn-1').height() + 'px'
 			});
-			if ((image.width / image.height) <= (container.width() / container.height())){
-				if(image.height > container.height()){
-					$(image)
-						.height('100%')
-						.css({'cursor': 'zoom-in', 'max-height': window.innerHeight * 1.5, 'max-width': 'none'})
-						.click(function(){	
-							$(this)
-								.height($(this).data('showingFull') ? '100%' : 'auto')
-								.css({'cursor': $(this).data('showingFull') ? 'zoom-in' : 'zoom-out'})
-								.data('showingFull', $(this).data('showingFull') ? false : true)
-								.parent().css({'overflow': $(this).data('showingFull') ? 'scroll' : 'hidden'}).focus();
-							
-						});
-				} 
-			} else { 
-				if(image.width > container.width()) {
-					$(image)
-						.width('100%')
-						.css({'cursor': 'zoom-in', 'max-width': window.innerWidth * 2, 'max-height': 'none'})
-						.click(function(){	
-							$(this)
-								.width($(this).data('showingFull') ? '100%' : 'auto')
-								.css({'cursor': $(this).data('showingFull') ? 'zoom-in' : 'zoom-out'})
-								.data('showingFull', $(this).data('showingFull') ? false : true)
-								.parent().css({'overflow': $(this).data('showingFull') ? 'scroll' : 'hidden'}).focus();	
-							
-						});
+			$('.display-inner').html(loading);		
+			var image = new Image();
+			image.src = bqGallery[idx].src;
+			$(image).addClass('image').attr('data-showingFull', false);
+			image.onload = function(){
+				container.css({
+					'height': window.innerHeight - k * 2 - $('.bq-gallery .btn-1').height(), 
+					'line-height': window.innerHeight - k * 2 - $('.bq-gallery .btn-1').height() + 'px'
+				});
+				if ((image.width / image.height) <= (container.width() / container.height())){
+					if(image.height > container.height()){
+						$(image)
+							.height('100%')
+							.css({'cursor': 'zoom-in', 'max-height': window.innerHeight * 1.5, 'max-width': 'none'})
+							.click(function(){	
+								$(this)
+									.height($(this).data('showingFull') ? '100%' : 'auto')
+									.css({'cursor': $(this).data('showingFull') ? 'zoom-in' : 'zoom-out'})
+									.data('showingFull', $(this).data('showingFull') ? false : true)
+									.parent().css({'overflow': $(this).data('showingFull') ? 'scroll' : 'hidden'}).focus();
+								
+							});
+					} 
+				} else {
+					if(image.width > container.width()) {
+						$(image)
+							.width('100%')
+							.css({'cursor': 'zoom-in', 'max-width': window.innerWidth * 2, 'max-height': 'none'})
+							.click(function(){	
+								$(this)
+									.width($(this).data('showingFull') ? '100%' : 'auto')
+									.css({'cursor': $(this).data('showingFull') ? 'zoom-in' : 'zoom-out'})
+									.data('showingFull', $(this).data('showingFull') ? false : true)
+									.parent().css({'overflow': $(this).data('showingFull') ? 'scroll' : 'hidden'}).focus();	
+								
+							});
+					}
 				}
-			}
-			$(image).click(function(){
+				$(image).click(function(){
+					if(!$(this).data('showingFull')) $('.bq-gallery .control-panel .hidden').focus();
+				})
 				if(!$(this).data('showingFull')) $('.bq-gallery .control-panel .hidden').focus();
-			})
-			if(!$(this).data('showingFull')) $('.bq-gallery .control-panel .hidden').focus();
-			
-			$('.bq-gallery .display-inner').html(image);
+				
+				$('.bq-gallery .display-inner').html(image);
 
-			refreshBQButtons();
+				refreshBQButtons();
+			}
 		}
 	}
 

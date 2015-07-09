@@ -9,10 +9,11 @@ section, summary,
 button, input,
 optgroup, select,
 textarea { box-sizing: border-box; }
-
 body { position: absolute; width: 100%; margin: 0; }
-
 .with-bounds { max-width: 1000px; margin: auto; }
+
+/**/
+
 @media all and (max-width: 1000px) {
 	.with-bounds { padding: 20px; }
 }

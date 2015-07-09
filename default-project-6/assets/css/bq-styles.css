@@ -1,7 +1,16 @@
-.bq-dv-0 { display: none; }
-
+article, aside, details,
+figcaption, figure,
+footer, header, hgroup,
+menu, nav, div,
+form, a, span, pre,
+h1, h2, h3, h4, h5, h6,
+ul, ol, li, table, td, tr,
+section, summary,
+button, input,
+optgroup, select,
+textarea { box-sizing: border-box; }
 body{ position: absolute; margin: 0; width: 100%; }
-
+.bq-dv-0 { display: none; }
 .bqsm-top-bar, .bqsm-menu, .bqsm-overlayer{	display: none; }
 
 @media all and (max-width: 640px){
@@ -86,5 +95,4 @@ body{ position: absolute; margin: 0; width: 100%; }
 	.bq-mb-90{ width: 90%; }
 	.bq-mb-95{ width: 95%; }
 	.bq-mb-100{ width: 100%; }
-
 }

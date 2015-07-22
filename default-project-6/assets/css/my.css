@@ -1,7 +1,13 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+body { font-family: 'Open Sans', sans-serif; }
 .with-bounds { max-width: 1000px; margin: auto; }
 
 /**/
 
 @media all and (max-width: 1000px) {
-	.with-bounds { padding: 20px; }
+	.with-bounds { padding: 0 20px; }
+}
+
+@media all and (max-width: 640px) {
+	/**/
 }

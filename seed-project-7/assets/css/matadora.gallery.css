@@ -1,0 +1,94 @@
+.matadora-gallery{
+	position: fixed;
+	top: 0;
+	left: 0;
+	max-width: 100%;
+	min-width: 100%;
+	margin: auto;
+	background-color: rgba(0, 0, 0, .9);
+	font-size: 0px;
+	text-align: center;
+	z-index: 11;
+	padding-bottom: 200px;
+}
+.matadora-gallery div, .matadora-gallery a, .matadora-gallery img, .matadora-gallery span{
+	box-sizing: border-box;
+}
+.matadora-gallery > div{
+	width: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
+.matadora-gallery .display{
+	padding: 0px;
+	background-color: #080808;
+	max-width: 1000px;
+	border: 1px solid #000;
+}
+.matadora-gallery .display-outer{
+	border: 1px solid #222;
+}
+.matadora-gallery .display-inner{
+	text-align: center;
+	overflow: hidden;
+	border: 1px solid #000;
+	background-color: #222;
+	width: 100%;
+	border-radius: 4px;
+}
+.matadora-gallery .image{
+	display: inline-block;
+	vertical-align: middle;
+}
+.matadora-gallery .control-panel{
+	border: 1px solid #000;
+	border-top: 1px solid #444;
+	text-align: center;
+	padding: 18px 20px;
+	max-width: 1000px;
+	background-color: #080808;
+}
+.matadora-gallery .control-panel .hidden{
+	opacity: 0;
+}
+.matadora-gallery .control-panel .btn-1{
+	text-decoration: none;
+	text-align: center;
+	color: white;	
+	background: linear-gradient(#222, #181818);
+	display: inline-block;
+	margin: 0 10px;
+	border: 1px solid #222;
+}
+.matadora-gallery .control-panel .btn-1:hover{
+	background: linear-gradient(#282828, #222);	
+}
+.matadora-gallery .control-panel .btn-1.disabled{
+	background: linear-gradient(#222, #181818);
+	cursor: default; color: #444;
+}
+.matadora-gallery .control-panel .btn-1 span{
+	border: 1px solid #000;
+	display: inline-block;
+	line-height: 50px;
+	width: 50px;
+	height: 50px;
+	font-size: 10px;
+}
+.matadora-gallery .control-panel{
+	padding: 10px;
+}
+@media all and (min-width: 1400px){
+	.matadora-gallery .display,
+	.matadora-gallery .control-panel{
+		max-width: 1200px;
+	}
+}
+@media all and (max-width: 640px){
+	.matadora-gallery .control-panel .btn-prev{
+		float: left;
+	}
+	.matadora-gallery .control-panel .btn-next{
+		float: right;
+	}
+}

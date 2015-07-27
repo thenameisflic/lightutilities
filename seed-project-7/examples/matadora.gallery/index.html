@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8'/>
+    <title>Example Matadora Gallery</title>
+    <link type='text/css' rel='stylesheet' href='../../assets/css/matadora.gallery.css'/>
+    <script type='text/javascript' src='../../assets/js/vendor/jquery-1.11.1.min.js'></script>
+    <script type='text/javascript' src='../../assets/js/vendor/jquery-migrate-1.2.1.js'></script>
+    <script type='text/javascript' src='../../assets/js/matadora.gallery.js'></script>
+  </head>
+  <body>
+    <div class='gallery' style='display:none;'></div>
+  	<a href='javascript:void(0)' onclick='showMatadoraGallery(0);'>Show gallery<i class='fa fa-home'></i></a>
+  	<script type='text/javascript'>
+    		$('.gallery').matadoraGallery([
+    			{'src': 'archive/img-1.png'},
+    			{'src': 'archive/img-2.png'}
+    		]);
+  	</script>
+  </body>
+</html>

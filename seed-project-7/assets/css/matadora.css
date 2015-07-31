@@ -14,10 +14,9 @@ body{
 	display: none; 
 }
 
-[class^="ib"] { display: inline-block; }
-.ibva-t { vertical-align: top; }
-.ibva-m { vertical-align: middle; }
-.ibva-b { vertical-align: bottom; }
+.ibva-t { display: inline-block; vertical-align: top; }
+.ibva-m { display: inline-block; vertical-align: middle; }
+.ibva-b { display: inline-block; vertical-align: bottom; }
 .fs-0 { font-size: 0px; }
 .mw-1000 { max-width: 1000px; margin: auto; }
 

@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, div, main,
+article, aside, details, figcaption, figure, fieldset,
+footer, header, hgroup, menu, nav, div, main, legend,
 form, a, span, pre, strong, h1, h2, h3, h4, h5, h6,
 ul, ol, li, table, td, tr, th, input, textarea,
 section, summary, button, optgroup, select { 

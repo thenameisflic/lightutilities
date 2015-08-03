@@ -35,10 +35,10 @@ body{
 .w-095 { width: 095%; } .w-100 { width: 100%; }
 
 @media all and (max-width: 1000px) { .mw-1000 { padding: 0 16px; } }
-@media all and (min-width: 0640px) { .lg-hide { display: none; } }
+@media all and (min-width: 0640px) { .lg-hide { display: none !important; } }
 @media all and (max-width: 0640px) {
 
-	.sm-hide { display: none; }	
+	.sm-hide { display: none !important; }	
 	.sm-w-033 { width: 33.333333%; }
 	.sm-w-066 { width: 66.666666%; }
 

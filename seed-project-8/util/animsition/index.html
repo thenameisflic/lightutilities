@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset='utf-8'/>
+		<title>Example Animsition</title>
+		<link type='text/css' rel='stylesheet' href='../../assets/css/animsition.min.css'/>
+		<script type='text/javascript' src='../../assets/js/vendor/jquery-1.11.1.min.js'></script>
+		<script type='text/javascript' src='../../assets/js/vendor/jquery-migrate-1.2.1.js'></script>
+		<script type='text/javascript' src='../../assets/js/vendor/jquery.animsition.min.js'></script>
+		<style type='text/css'>
+			.animsition { text-align: center; }
+			.animsition-loading:after {
+				content: "The wizard is building your page...";
+			}
+		</style>
+	</head>
+	<body>
+		<div class='animsition'>
+			<img src='http://placehold.it/640x480/222222/000000/&text=Hello World!'/>
+		</div>
+		<script type='text/javascript'>
+			$(function() {
+
+				 $(".animsition").animsition({  
+					inClass: 'fade-in',
+					outClass: 'fade-out',
+					inDuration: 1500,
+					outDuration: 800,
+					linkElement: '.animsition-link',
+					loading: true,
+					loadingParentElement: 'body',
+					loadingClass: 'animsition-loading',
+					unSupportCss: [ 
+						'animation-duration',
+						'-webkit-animation-duration',
+						'-o-animation-duration'
+					],
+					overlay: false,
+					overlayClass: 'animsition-overlay-slide',
+					overlayParentElement: 'body'
+				});
+
+			});
+		</script>
+	</body>
+</html>

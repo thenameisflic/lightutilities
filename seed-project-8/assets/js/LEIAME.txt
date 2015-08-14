@@ -1,0 +1,30 @@
+http://blog.da2k.com.br/2015/02/13/escalando-javascript-no-browser/
+
+/vendor
+
+Aqui em /vendor fica tudo o que for de terceiros: libs, frameworks, plugins. Se necessário, podemos criar mais diretórios aqui dentro para melhorar a organização.
+
+/modules
+
+No diretório /modules, podemos criar módulos que serão comuns, e poderão ser compartilhados por toda a aplicação: infinite scroll, paginação, etc.
+
+/resources
+
+Em /resources, ficam as chamadas à recursos externos: basicamente os resources servirão para obter com Ajax dados de uma API de terceiros, ou mesmo uma API interna, por exemplo.
+
+/services
+
+Os services serão auxiliadores dos controllers. É neles que iremos consumir as respostas dos resources, utilizar os modules, fazer tratamento de DOM, utilizar plugins de terceiros, e toda a parte bruta da nossa aplicação. Os services basicamente irão consumir tudo o que estiver em resources, modules e vendor.
+Cada service deve tratar de apenas uma pequena parte da aplicação.
+
+/controllers
+
+Os controllers continuam fazendo o papel de intermediários entre a view e as outras partes da aplicação, mas com o auxílio dos services. Eles irão chamar services específicos sempre que necessário, e devolver as respostas à respectiva view. Nenhuma lógica ou regra de negócio deveria ficar nos controllers, mas sim nos services.
+
+app.js
+
+E, por fim, o app.js, que é o cara que vai chamar os controllers na hora em que eles tiverem que aparecer. Em alguns casos, podemos usar também um diretório routes, e fazer as rotas conversarem diretamente com os controllers.
+
+Mas isso depende de cada projeto. Essa estrutura é uma base para facilitar a modularização. Ainda dentro de cada diretório desses, podemos criar outros para organizar melhor, conforme à necessidade.
+
+E, se você quiser fazer um bundle, juntando tudo em um arquivo só, você pode concatenar todos os arquivos, exatamente nessa ordem :)

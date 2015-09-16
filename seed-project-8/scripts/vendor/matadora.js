@@ -29,8 +29,12 @@ $(function() {
 	$('.struct-overlayer').click(function() { $('.struct-switch').click(); });
 });
 
-$(window).resize(function(){ 
+$(window).resize(function(){
 	if ($('.struct-switch').data('opened')) {
+		if (window.innerWidth >= 640) {
+			$('.struct-switch').click();
+			return;
+		}
 		var width_struct = parseInt(window.innerWidth * .66);
 		$('.struct-site').css({ 'left': width_struct });
 		$('.struct-overlayer').css({ 'left': width_struct, 'height': window.innerHeight });

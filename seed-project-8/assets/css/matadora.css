@@ -2,7 +2,7 @@
 article, aside, details, figcaption, figure, fieldset,
 footer, header, hgroup, menu, nav, div, main, legend,
 form, a, span, pre, strong, h1, h2, h3, h4, h5, h6,
-ul, ol, li, table, td, tr, th, input, textarea,
+ul, ol, li, table, td, tr, th, input, textarea, p,
 section, summary, button, optgroup, select, label { 
 	box-sizing: border-box; 
 }

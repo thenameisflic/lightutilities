@@ -1,0 +1,2 @@
+.fade-view.ng-enter { transition: .75s; opacity: 0; }
+.fade-view.ng-enter-active { opacity: 1; }

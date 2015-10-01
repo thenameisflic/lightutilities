@@ -11,6 +11,9 @@
 		<script src='scripts/vendor/requirejs/require.js' data-main='scripts/app'></script>
 	</head>
 	<body>
-		<h1>Hey, that's index!</h1>
+		<div ng-controller='helloCtrl'>
+			<span>Hello, {{name}}!</span>
+			<hello></hello>
+		</div>
 	</body>
 </html>

@@ -5,7 +5,7 @@
 	max-width: 100%;
 	min-width: 100%;
 	margin: auto;
-	background-color: rgba(0, 0, 0, .9);
+	background-color: #242424;
 	font-size: 0px;
 	text-align: center;
 	z-index: 11;
@@ -24,29 +24,32 @@
 	background-color: #080808;
 	max-width: 1000px;
 	border: 1px solid #000;
+	border-radius: 4px;
 }
 .matadora-gallery .display-outer{
-	border: 1px solid #222;
+	border: 1px solid #333;
+	border-radius: 4px;
 }
 .matadora-gallery .display-inner{
 	text-align: center;
 	overflow: hidden;
 	border: 1px solid #000;
-	background-color: #222;
+	background-color: #1c1c1c;
 	width: 100%;
 	border-radius: 4px;
+	/*-webkit-overflow-scrolling: touch;*/
 }
 .matadora-gallery .image{
 	display: inline-block;
 	vertical-align: middle;
 }
 .matadora-gallery .control-panel{
-	border: 1px solid #000;
-	border-top: 1px solid #444;
+	/*border: 1px solid #000;*/
+	/*border-top: 1px solid #444;*/
 	text-align: center;
 	padding: 18px 20px;
 	max-width: 1000px;
-	background-color: #080808;
+	background-color: #242424;
 }
 .matadora-gallery .control-panel .hidden{
 	opacity: 0;
@@ -58,7 +61,8 @@
 	background: linear-gradient(#222, #181818);
 	display: inline-block;
 	margin: 0 10px;
-	border: 1px solid #222;
+	border: 1px solid #111;
+	border-radius: 50%;
 }
 .matadora-gallery .control-panel .btn-1:hover{
 	background: linear-gradient(#282828, #222);	
@@ -68,15 +72,16 @@
 	cursor: default; color: #444;
 }
 .matadora-gallery .control-panel .btn-1 span{
-	border: 1px solid #000;
+	border: 1px solid #2a2a2a;
 	display: inline-block;
-	line-height: 50px;
-	width: 50px;
-	height: 50px;
-	font-size: 10px;
+	line-height: 28px;
+	width: 30px;
+	height: 30px;
+	font-size: 14px;
+	border-radius: 50%;
 }
 .matadora-gallery .control-panel{
-	padding: 10px;
+	padding: 5px;
 }
 @media all and (min-width: 1400px){
 	.matadora-gallery .display,

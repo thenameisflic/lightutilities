@@ -1,3 +1,5 @@
+require();
+
 require.config({
 	paths: {
 	//	Vendor
@@ -8,8 +10,11 @@ require.config({
 		'hello': 'modules/hello',
 	//	Controllers
 		'helloCtrl': 'controllers/hello',
+		'magazinesCtrl': 'controllers/magazines',
 	//	Directives
 		'helloDire': 'directives/hello',
+	//  Factories
+		'magazinesFact': 'factories/magazines',
 	//	Configs
 		'httpProviderConf': 'configs/http-provider',
 		'routeProviderConf': 'configs/route-provider'

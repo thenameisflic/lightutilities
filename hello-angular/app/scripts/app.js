@@ -1,5 +1,3 @@
-require();
-
 require.config({
 	paths: {
 	//	Vendor

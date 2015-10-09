@@ -11,6 +11,7 @@ require.config({
 		'magazinesCtrl': 'controllers/magazines',
 	//	Directives
 		'helloDire': 'directives/hello',
+		'matadoraStructDire': 'directives/matadora-struct',
 	//  Factories
 		'magazinesFact': 'factories/magazines',
 	//	Configs

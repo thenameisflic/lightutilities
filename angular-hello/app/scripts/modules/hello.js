@@ -2,6 +2,7 @@ define('hello', [
 	'helloCtrl',
 	'magazinesCtrl',
 	'helloDire',
+	'matadoraStructDire',
 	'magazinesFact',
 	'httpProviderConf',
 	'routeProviderConf'
@@ -9,6 +10,7 @@ define('hello', [
 	helloCtrl,
 	magazinesCtrl,
 	helloDire,
+	matadoraStructDire,
 	magazinesFact,
 	httpProviderConf,
 	routeProviderConf
@@ -20,6 +22,7 @@ define('hello', [
 		.config(routeProviderConf)
 		.factory('magazinesFact', magazinesFact)
 		.directive('hello', helloDire)
+		.directive('matadoraStruct', matadoraStructDire)
 		.controller('helloCtrl', helloCtrl)
 		.controller('magazinesCtrl', magazinesCtrl);
 

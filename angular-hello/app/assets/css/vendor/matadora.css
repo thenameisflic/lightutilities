@@ -10,13 +10,10 @@ body{
 	position: absolute; margin: 0; width: 100%;
 	font-family: 'Open Sans', sans-serif; 
 }
-.struct-top-bar, .struct-main, .struct-overlayer{
-	display: none; 
-}
 
-.ibva-t { display: inline-block; vertical-align: top; }
-.ibva-m { display: inline-block; vertical-align: middle; }
-.ibva-b { display: inline-block; vertical-align: bottom; }
+.ib-t { display: inline-block; vertical-align: top; }
+.ib-m { display: inline-block; vertical-align: middle; }
+.ib-b { display: inline-block; vertical-align: bottom; }
 .fs-0 { font-size: 0px; }
 .mw-1000 { max-width: 1000px; margin: auto; }
 
@@ -52,44 +49,5 @@ body{
 	.sm-w-075 { width: 075%; } .sm-w-080 { width: 080%; }
 	.sm-w-085 { width: 085%; } .sm-w-090 { width: 090%; }
 	.sm-w-095 { width: 095%; } .sm-w-100 { width: 100%; }
-
-	.struct-main > nav { height: 100%; background-color: #000; }
-	.struct-main, .struct-site{ margin-top: 48px; }
-	.struct-site{ display: block; width: 100%; }
-	.struct-overlayer{
-		background-color: rgba(0, 0, 0, .5);
-		width: 100%; cursor: pointer; z-index: 9999;
-	}
-	.struct-top-bar{ 
-		position: fixed; width: 100%; top: 0;
-		display: block; background-color: #111; 
-		color: white; z-index: 1; text-align: center;
-	}
-	.struct-label{ 
-		display: inline-block; margin: 0; padding: 0; text-transform: uppercase;
-		height: 48px; line-height: 48px; font-size: 18px;
-	}
-	.struct-switch { 
-		display: inline-block; background-color: #111;
-		text-decoration: none; height: 48px;
-		line-height: 48px; padding: 0 16px;
-		float: left; color: white; font-size: 18px;
-	}
-	/* ~~~ */
-	.aux-menu { font-size: 0px; }
-	.aux-menu ul { padding: 0; }
-	.aux-menu .btn { display: block; }
-	.aux-menu .btn a, .aux-menu .btn span { 
-		display: block; font-size: 14px;
-		padding: 10px 14px; color: white;
-		text-decoration: none; cursor: pointer;
-		background-color: #444;
-	}
-	.aux-menu .btn span {
-		font-weight: 700; font-size: 15px; background-color: #222;
-	}
-	.aux-menu .btn a:hover {
-		background-color: #333;
-	}
 
 }

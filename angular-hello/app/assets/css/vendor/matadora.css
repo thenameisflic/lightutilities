@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,700);
 article, aside, details, figcaption, figure, fieldset,
 footer, header, hgroup, menu, nav, div, main, legend,
 form, a, span, pre, strong, h1, h2, h3, h4, h5, h6,
@@ -8,7 +8,7 @@ section, summary, button, optgroup, select, label {
 }
 body{ 
 	position: absolute; margin: 0; width: 100%;
-	font-family: 'Open Sans', sans-serif; 
+	font-family: 'Raleway', sans-serif;
 }
 
 .ib-t { display: inline-block; vertical-align: top; }
@@ -30,6 +30,22 @@ body{
 .w-075 { width: 075%; } .w-080 { width: 080%; }
 .w-085 { width: 085%; } .w-090 { width: 090%; }
 .w-095 { width: 095%; } .w-100 { width: 100%; }
+
+.sidemenu-struct>.top { position: fixed; width: 100%; top: 0; left: 0;
+	text-align: center; z-index: 99; }
+.sidemenu-struct>.top .btn { font-size: 20px; display: inline-block; }
+.sidemenu-struct>.top .container-title { font-size: 20px; 
+	text-transform: uppercase; }
+.sidemenu-struct>.overlayer { width: 100%; position: fixed; top: 0;
+	left: 0; height: 999999999px; z-index: 99; background-color: #d00;
+	opacity: .25 }
+.sidemenu-struct>.area-menu { position: fixed; width: 66%; transition: left .1s;
+	background-color: #00d; z-index: 99; overflow-x: hidden; overflow-y: auto; }
+.sidemenu-struct>.area-menu .menu .ul-1 { padding: 0; margin: 0; }
+.sidemenu-struct>.area-menu .menu .li-1 { display: block; }
+.sidemenu-struct>.area-menu .menu .btn { font-size: 14px; display: block;
+	color: black; padding: 10px; text-decoration: none; background-color: #00c }
+.sidemenu-struct>.area-menu .menu .btn:hover { background-color: #00a }
 
 @media all and (max-width: 1000px) { .mw-1000 { padding: 0 16px; } }
 @media all and (min-width: 0640px) { .lg-hide { display: none !important; } }

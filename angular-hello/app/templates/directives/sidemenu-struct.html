@@ -1,0 +1,35 @@
+<div class='sidemenu-struct'>
+	<div class='top fs-0' ng-style='{
+		"height": sidemenuTop.height + "px",
+		"line-height": sidemenuTop.height + "px",
+		"background-color": colorScheme[0],
+		"color": colorScheme[1]
+	}'>	
+		<div class='container-btn ib-m w-010'>
+			<a href='javascript:;' class='btn' ng-click='switchSidemenu()'
+				ng-style='{"color": colorScheme[1]}'><i class='fa fa-bars'></i></a>
+		</div>
+		<div class='container-title ib-m w-090'>
+			<span>Hello Angular</span>
+		</div>
+	</div>
+	<div class='overlayer' ng-click='switchSidemenu()' ng-style='{
+		"margin-top": sidemenuTop.height + "px",
+		"display": sidemenuOverlayer.display
+	}'></div>
+	<div class='area-menu' ng-style='{
+		"top": sidemenuTop.height + "px",
+		"left": sidemenuAreaMenu.left
+	}'>
+		<nav class='menu'>
+			<ul class='ul-1'>
+				<li class='li-1' ng-repeat='link in sidemenuLinks'><a class='btn' href='{{link.url}}'>{{link.label}}</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class='area-site' ng-style='{
+		"margin-top": sidemenuTop.height + "px"
+	}'>
+		<div ng-transclude></div>
+	</div>
+</div>

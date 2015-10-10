@@ -16,41 +16,18 @@ define('sidemenuStructDire', function() {
 			controller: function($scope, $window) {
 				var sidemenuOpened = false;
 				var colorScheme = colorSchemes[$scope.mainColor];
-				var adjustSidemenuHeight = function() {
+				var adjustSidemenu = function() {
+					var k = $window.innerWidth > 640 ? 0 : $scope.sidemenuTopHeight;
 					angular.element(document.querySelector('.sidemenu-struct>.area-menu'))
-						.css('height', ($window.innerHeight - $scope.sidemenuTop.height) + 'px');
+						.css('height', ($window.innerHeight - k) + 'px');
+					angular.element(document.querySelector('.sidemenu-struct>.area-site'))
+						.css('margin-top', k + 'px');
+					if (!k && sidemenuOpened) $scope.switchSidemenu();
 				}
+				$scope.sidemenuTopHeight = 44;
 				$scope.colorScheme = colorScheme == undefined ? 
 					colorSchemes['black'] : colorScheme;
-				$scope.sidemenuTop = {
-					'height': 44
-				};
 				$scope.sidemenuLinks = [
-					{'label': 'Facebook', 'url': 'http://facebook.com'},
-					{'label': 'Google', 'url': 'http://google.com'},
-					{'label': 'Dropbox', 'url': 'http://dropbox.com'},
-					{'label': 'Instagram', 'url': 'http://instagram.com'},
-					{'label': 'Twitter', 'url': 'http://twitter.com'},
-					{'label': 'Facebook', 'url': 'http://facebook.com'},
-					{'label': 'Google', 'url': 'http://google.com'},
-					{'label': 'Dropbox', 'url': 'http://dropbox.com'},
-					{'label': 'Instagram', 'url': 'http://instagram.com'},
-					{'label': 'Twitter', 'url': 'http://twitter.com'},
-					{'label': 'Facebook', 'url': 'http://facebook.com'},
-					{'label': 'Google', 'url': 'http://google.com'},
-					{'label': 'Dropbox', 'url': 'http://dropbox.com'},
-					{'label': 'Instagram', 'url': 'http://instagram.com'},
-					{'label': 'Twitter', 'url': 'http://twitter.com'},
-					{'label': 'Facebook', 'url': 'http://facebook.com'},
-					{'label': 'Google', 'url': 'http://google.com'},
-					{'label': 'Dropbox', 'url': 'http://dropbox.com'},
-					{'label': 'Instagram', 'url': 'http://instagram.com'},
-					{'label': 'Twitter', 'url': 'http://twitter.com'},
-					{'label': 'Facebook', 'url': 'http://facebook.com'},
-					{'label': 'Google', 'url': 'http://google.com'},
-					{'label': 'Dropbox', 'url': 'http://dropbox.com'},
-					{'label': 'Instagram', 'url': 'http://instagram.com'},
-					{'label': 'Twitter', 'url': 'http://twitter.com'},
 					{'label': 'Facebook', 'url': 'http://facebook.com'},
 					{'label': 'Google', 'url': 'http://google.com'},
 					{'label': 'Dropbox', 'url': 'http://dropbox.com'},
@@ -67,13 +44,16 @@ define('sidemenuStructDire', function() {
 					sidemenuOpened = !sidemenuOpened;
 					var deslocate = sidemenuOpened ? '0' : '-66%';
 					var overlayerDisplay = sidemenuOpened ? 'block' : 'none';
+					var siteOverflow = sidemenuOpened ? 'hidden' : 'auto';
 					angular.element(document.querySelector('.sidemenu-struct>.area-menu'))
 						.css('left', deslocate);
 					angular.element(document.querySelector('.sidemenu-struct>.overlayer'))
 						.css('display', overlayerDisplay);
+					angular.element(document.querySelector('body'))
+						.css('overflow', siteOverflow);
 				}
-				angular.element($window).bind('resize', adjustSidemenuHeight);
-				adjustSidemenuHeight();
+				angular.element($window).bind('resize', adjustSidemenu);
+				adjustSidemenu();
 			}
 		}
 	}

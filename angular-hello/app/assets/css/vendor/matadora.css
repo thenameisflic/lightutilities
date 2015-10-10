@@ -31,21 +31,9 @@ body{
 .w-085 { width: 085%; } .w-090 { width: 090%; }
 .w-095 { width: 095%; } .w-100 { width: 100%; }
 
-.sidemenu-struct>.top { position: fixed; width: 100%; top: 0; left: 0;
-	text-align: center; z-index: 99; }
-.sidemenu-struct>.top .btn { font-size: 20px; display: inline-block; }
-.sidemenu-struct>.top .container-title { font-size: 20px; 
-	text-transform: uppercase; }
-.sidemenu-struct>.overlayer { width: 100%; position: fixed; top: 0;
-	left: 0; height: 999999999px; z-index: 99; background-color: #d00;
-	opacity: .25 }
-.sidemenu-struct>.area-menu { position: fixed; width: 66%; transition: left .1s;
-	background-color: #00d; z-index: 99; overflow-x: hidden; overflow-y: auto; }
-.sidemenu-struct>.area-menu .menu .ul-1 { padding: 0; margin: 0; }
-.sidemenu-struct>.area-menu .menu .li-1 { display: block; }
-.sidemenu-struct>.area-menu .menu .btn { font-size: 14px; display: block;
-	color: black; padding: 10px; text-decoration: none; background-color: #00c }
-.sidemenu-struct>.area-menu .menu .btn:hover { background-color: #00a }
+.sidemenu-struct>.top,
+.sidemenu-struct>.area-menu,
+.sidemenu-struct>.overlayer { display: none; }
 
 @media all and (max-width: 1000px) { .mw-1000 { padding: 0 16px; } }
 @media all and (min-width: 0640px) { .lg-hide { display: none !important; } }
@@ -65,5 +53,25 @@ body{
 	.sm-w-075 { width: 075%; } .sm-w-080 { width: 080%; }
 	.sm-w-085 { width: 085%; } .sm-w-090 { width: 090%; }
 	.sm-w-095 { width: 095%; } .sm-w-100 { width: 100%; }
+
+	.sidemenu-struct>.top,
+	.sidemenu-struct>.area-menu,
+	.sidemenu-struct>.overlayer { display: block; }
+
+	.sidemenu-struct>.top { position: fixed; width: 100%; top: 0; left: 0;
+		text-align: center; z-index: 99; }
+	.sidemenu-struct>.top .btn { font-size: 20px; display: inline-block; }
+	.sidemenu-struct>.top .container-title { font-size: 20px; 
+		text-transform: uppercase; }
+	.sidemenu-struct>.overlayer { width: 100%; position: fixed; top: 0;
+		left: 0; height: 999999999px; z-index: 99; background-color: #d00;
+		opacity: .25 }
+	.sidemenu-struct>.area-menu { position: fixed; width: 66%; transition: left .1s;
+		background-color: #00d; z-index: 99; overflow-x: hidden; overflow-y: auto; }
+	.sidemenu-struct>.area-menu .menu .ul-1 { padding: 0; margin: 0; }
+	.sidemenu-struct>.area-menu .menu .li-1 { display: block; }
+	.sidemenu-struct>.area-menu .menu .btn { font-size: 14px; display: block;
+		color: black; padding: 10px; text-decoration: none; background-color: #00c }
+	.sidemenu-struct>.area-menu .menu .btn:hover { background-color: #00a }
 
 }

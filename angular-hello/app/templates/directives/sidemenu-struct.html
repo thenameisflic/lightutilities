@@ -1,7 +1,7 @@
 <div class='sidemenu-struct'>
 	<div class='top fs-0' ng-style='{
-		"height": sidemenuTop.height + "px",
-		"line-height": sidemenuTop.height + "px",
+		"height": sidemenuTopHeight + "px",
+		"line-height": sidemenuTopHeight + "px",
 		"background-color": colorScheme[0],
 		"color": colorScheme[1]
 	}'>	
@@ -14,11 +14,11 @@
 		</div>
 	</div>
 	<div class='overlayer' ng-click='switchSidemenu()' ng-style='{
-		"margin-top": sidemenuTop.height + "px",
+		"margin-top": sidemenuTopHeight + "px",
 		"display": sidemenuOverlayer.display
 	}'></div>
 	<div class='area-menu' ng-style='{
-		"top": sidemenuTop.height + "px",
+		"top": sidemenuTopHeight + "px",
 		"left": sidemenuAreaMenu.left
 	}'>
 		<nav class='menu'>
@@ -27,9 +27,7 @@
 			</ul>
 		</nav>
 	</div>
-	<div class='area-site' ng-style='{
-		"margin-top": sidemenuTop.height + "px"
-	}'>
+	<div class='area-site'>
 		<div ng-transclude></div>
 	</div>
 </div>

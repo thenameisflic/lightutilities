@@ -60,18 +60,25 @@ body{
 
 	.sidemenu-struct>.top { position: fixed; width: 100%; top: 0; left: 0;
 		text-align: center; z-index: 99; }
-	.sidemenu-struct>.top .btn { font-size: 20px; display: inline-block; }
+	.sidemenu-struct>.top .btn { font-size: 20px; display: inline-block;
+		width: 100%; }
 	.sidemenu-struct>.top .container-title { font-size: 20px; 
 		text-transform: uppercase; }
 	.sidemenu-struct>.overlayer { width: 100%; position: fixed; top: 0;
-		left: 0; height: 999999999px; z-index: 99; background-color: #d00;
-		opacity: .25 }
+		left: 0; height: 999999999px; z-index: 99; opacity: .5 }
 	.sidemenu-struct>.area-menu { position: fixed; width: 66%; transition: left .1s;
-		background-color: #00d; z-index: 99; overflow-x: hidden; overflow-y: auto; }
+		z-index: 99; overflow-x: hidden; overflow-y: auto; }
 	.sidemenu-struct>.area-menu .menu .ul-1 { padding: 0; margin: 0; }
 	.sidemenu-struct>.area-menu .menu .li-1 { display: block; }
 	.sidemenu-struct>.area-menu .menu .btn { font-size: 14px; display: block;
-		color: black; padding: 10px; text-decoration: none; background-color: #00c }
-	.sidemenu-struct>.area-menu .menu .btn:hover { background-color: #00a }
+		padding: 14px 16px; text-decoration: none; border: none; }
+	.sidemenu-struct>.area-menu .menu .btn:hover {		
+		border-right: 4px solid #19cfa6; 
+		font-weight: 700;
+	}
+	.sidemenu-struct>.area-menu .menu .btn .icon { font-size: 18px; margin-right: 16px; }
+	.sidemenu-struct>.area-menu .menu .title { font-size: 14px; display: block;
+		padding: 6px 0px; text-decoration: none; border: none; font-weight: 700;
+		text-align: center; }
 
 }

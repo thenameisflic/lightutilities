@@ -1,9 +1,21 @@
 define('sidemenuStructDire', function() {
 
 	var colorSchemes = {
-		'black': ['#000000', '#ffffff'],
-		'blue': ['#0000d0', '#ffffff']
+		'black': ['#ffffff', '#000000', '#161616', '#242424'],
+		'blue': ['#ffffff', '#05046b', '#021391', '#133dba'],
+		'red': ['#ffffff', '#730a00', '#ab0016', '#ca0028'],
+		'green': ['#ffffff', '#084d34', '#08724d', '#0c8a73']
 	}
+
+	var sidemenuLinks = [
+		{'type': 'title', 'label': 'Find Us', 'icon': 'fa fa-facebook-home'},
+		{'type': 'btn', 'label': 'Facebook', 'url': 'javascript:;', 'icon': 'fa fa-facebook-square'},
+		{'type': 'btn', 'label': 'Google', 'url': 'javascript:;', 'icon': 'fa fa-google'},
+		{'type': 'btn', 'label': 'Dropbox', 'url': 'javascript:;', 'icon': 'fa fa-dropbox'},
+		{'type': 'btn', 'label': 'Instagram', 'url': 'javascript:;', 'icon': 'fa fa-instagram'},
+		{'type': 'btn', 'label': 'Twitter', 'url': 'javascript:;', 'icon': 'fa fa-twitter-square'},
+		{'type': 'btn', 'label': 'Github', 'url': 'javascript:;', 'icon': 'fa fa-github-square'}
+	];
 
 	return function() {
 		return {
@@ -11,7 +23,8 @@ define('sidemenuStructDire', function() {
 			templateUrl: 'templates/directives/sidemenu-struct.html',
 			transclude: true,
 			scope: {
-				mainColor: '='
+				mainColor: '=',
+				title: '='
 			},
 			controller: function($scope, $window) {
 				var sidemenuOpened = false;
@@ -27,13 +40,7 @@ define('sidemenuStructDire', function() {
 				$scope.sidemenuTopHeight = 44;
 				$scope.colorScheme = colorScheme == undefined ? 
 					colorSchemes['black'] : colorScheme;
-				$scope.sidemenuLinks = [
-					{'label': 'Facebook', 'url': 'http://facebook.com'},
-					{'label': 'Google', 'url': 'http://google.com'},
-					{'label': 'Dropbox', 'url': 'http://dropbox.com'},
-					{'label': 'Instagram', 'url': 'http://instagram.com'},
-					{'label': 'Twitter', 'url': 'http://twitter.com'}
-				];
+				$scope.sidemenuLinks = sidemenuLinks;
 				$scope.sidemenuAreaMenu = {
 					'left': sidemenuOpened ? '0' : '-66%'
 				}

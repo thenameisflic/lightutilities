@@ -62,7 +62,7 @@ body{
 		text-align: center; z-index: 99; }
 	.sidemenu-struct>.top .btn { font-size: 20px; display: inline-block;
 		width: 100%; }
-	.sidemenu-struct>.top .container-title { font-size: 20px; 
+	.sidemenu-struct>.top .container-title { font-size: 18px; 
 		text-transform: uppercase; }
 	.sidemenu-struct>.overlayer { width: 100%; position: fixed; top: 0;
 		left: 0; height: 999999999px; z-index: 99; opacity: .5 }

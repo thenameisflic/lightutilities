@@ -24,7 +24,7 @@ define('sidemenuStructDire', function() {
 			transclude: true,
 			scope: {
 				mainColor: '=',
-				title: '='
+				topTitle: '='
 			},
 			controller: function($scope, $window) {
 				var sidemenuOpened = false;

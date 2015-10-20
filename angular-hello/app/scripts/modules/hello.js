@@ -26,6 +26,6 @@ define('hello', [
 		.controller('helloCtrl', helloCtrl)
 		.controller('magazinesCtrl', magazinesCtrl);
 
-	angular.bootstrap(document, ['hello']);
+	angular.bootstrap(document, ['hello']);	
 	
 });

@@ -10,7 +10,10 @@
 		<link rel='stylesheet' href='assets/css/global.css'>
 		<script src='scripts/require.js' data-main='scripts/app'></script>
 	</head>
-	<body>
+	<body ng-controller='helloCtrl'>	 
+		<div class='loading-screen' ng-hide='loadingScreen'>
+			<img class='img-loading' src='assets/imgs/loading-screen.gif'/>
+		</div>   
 		<sidemenu-struct main-color="'black'" top-title="'Hello, World!'">
 			<div ng-view class='fade-view'></div></sidemenu-struct>
 	</body>

@@ -1,4 +1,5 @@
 require.config({
+	waitSeconds: 0,
 	paths: {
 	//	Vendor
 		'angular': 'vendor/angular/angular.min',
